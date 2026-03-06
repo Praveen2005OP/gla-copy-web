@@ -1,0 +1,357 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+
+            <!-- Left Side -->
+            <div class="col-lg-6 left-panel" class="left-panel">
+                <div class="mobileW1">
+                    <h2>REQUEST AN ADMISSION</h2>
+                    <p class="hideonmobile text-center">
+                        1. Your details must be same as 10th/Educational certificate.<br />
+                        2. You will receive your credentials on specified mobile no.<br />
+                        3. Check you eligibility from (ε) symbol at last before submit.
+                    </p>
+                </div>
+                <div class="help-line-numbers" style="margin-top: 60px;">
+                    <span class="help-line" style="color: white;">HELP LINE</span>
+                    <hr/>
+                    <p class="help-line" style="color: rgb(161, 161, 161);">OFFLINE COURSES</p>
+                    <p class="help-line-no"><span><span class="icon-class-success"><i class="fa fa-phone"></i></span>&nbsp;&nbsp;+91 76175 95613</span></p>
+                    <p class="help-line" style="color: rgb(161, 161, 161);">ONLINE COURSES</p>
+                    <p class="help-line-no"><span><span class="icon-class-warning"><i class="fa fa-phone"></i></span>&nbsp;&nbsp;+91 90459 54392</span></p>
+                    <p class="help-line-no"><span><span class="icon-class-info"><i class="fa fa-phone"></i></span>&nbsp;&nbsp;+91 90459 54396</span></p>
+                </div>
+            </div>
+
+            <!-- Right Side -->
+            <div class="col-lg-6 right-panel">
+                <p class="text-center">Registered User, Click Here To <a href="/">Login</a></p>
+                <hr>
+
+                <form>
+                    <div class="row mb-3 align-items-center">
+                        <div class="col-md-4">
+                            <label for="alumni">Alumni/Old Student:</label>
+                        </div>
+                        <div class="col-md-5">
+                            <input type="number" class="form-control" placeholder="Enter University Roll No">
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-warning w-100">VALIDATE</button>
+                        </div>
+                    </div>
+                </form>
+
+                <h4 class="text-center my-3">New Student</h4>
+
+                <form>
+                
+                    <div class="row mb-3">
+                        <div class="col-md-4"><label>Select Campus:</label></div>
+                        <div class="col-md-8">
+                            <select class="form-control">
+                                <option value="">-- Select Campus --</option>
+                                <option value="campus1">Mathura Campus</option>
+                                <option value="campus2">Noida Campus</option>
+                            </select>
+                        </div>
+                    </div>
+                
+                    <div class="row mb-3">
+                        <div class="col-md-4"><label>Admission In:</label></div>
+                        <div class="col-md-8">
+                            <select class="form-control">
+                                <option value="">-- Select Admission In --</option>
+                            </select>
+                        </div>
+                    </div>
+                
+                    <div class="row mb-3">
+                        <div class="col-md-4"><label>Full Name:</label></div>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" placeholder="Enter your name">
+                        </div>
+                    </div>
+                
+                    <div class="row mb-3">
+                        <div class="col-md-4"><label>Father's Name:</label></div>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" placeholder="Enter your father's name">
+                        </div>
+                    </div>
+                
+                    <div class="row mb-3">
+                        <div class="col-md-4"><label>Mother's Name:</label></div>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" placeholder="Enter your mother's name">
+                        </div>
+                    </div>
+                
+                    <div class="row mb-3">
+                        <div class="col-md-4"><label>Phone:</label></div>
+                        <div class="col-md-8">
+                            <input type="number" class="form-control" placeholder="Enter your phone number">
+                        </div>
+                    </div>
+                
+                    <div class="row mb-3">
+                        <div class="col-md-4"><label>Email:</label></div>
+                        <div class="col-md-8">
+                            <input type="email" class="form-control" placeholder="Enter your email-id">
+                        </div>
+                    </div>
+                
+                    <div class="row mb-3">
+                        <div class="col-md-4"><label>Country:</label></div>
+                        <div class="col-md-8">
+                            <select class="form-control">
+                                <option value="">-- Select Country --</option>
+                                <option value="con1">India</option>
+                            </select>
+                        </div>
+                    </div>
+                
+                    <div class="row mb-3">
+                        <div class="col-md-4"><label>State:</label></div>
+                        <div class="col-md-8">
+                            <select class="form-control" id="state" onchange="loadDistricts()">
+                                <option value="">-- Select State --</option>
+                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Ladakh">Ladakh</option>
+                                <option value="Lakshadweep">Lakshadweep</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Odisha">Odisha</option>
+                                <option value="Puducherry">Puducherry</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                                <option value="West Bengal">West Bengal</option>
+                            </select>
+                        </div>
+                    </div>
+                
+                    <div class="row mb-3">
+                        <div class="col-md-4"><label>District:</label></div>
+                        <div class="col-md-8">
+                            <select class="form-control" id="district">
+                                <option value="">-- Select District --</option>
+                            </select>
+                        </div>
+                    </div>
+                
+                    <div class="row mb-3">
+                        <div class="col-md-4"><label>Course:</label></div>
+                        <div class="col-md-8">
+                            <select class="form-control">
+                                <option>-- Select Course --</option>
+                                <option value="btech-civil">B.Tech. - Civil Engineering</option>
+                                <option value="btech-civil">B.Tech. - Civil Engineering with minor in Computer Science & Engineering</option>
+                                <option value="btech-cse">B.Tech. - Computer Science & Engineering</option>
+                                <option value="btech-cse">B.Tech. - Computer Science & Engineering (Specialization in Cloud Computing & Virtualization)</option>
+                                <option value="btech-cse">B.Tech. - Computer Science & Engineering (Specialization in Data Analytics)</option>
+                                <option value="btech-cse">B.Tech. - Computer Science & Engineering (Specialization in Cyber Security & Forensics)</option>
+                                <option value="btech-cse">B.Tech. - Computer Science & Engineering (Specialization in Internet of Things)</option>
+                                <option value="btech-cse">B.Tech. - Computer Science & Engineering (Specialization in Artificial Intelligence & Machine Learning)</option>
+                                <option value="btech-cse">B.Tech. - Computer Science & Engineering (Specialization in Artificial Intelligence & Machine Learning and IOT)</option>
+                                <option value="btech-cse">B.Tech. - Computer Science & Engineering (Specialization in Block Chain Technology)</option>
+                                <option value="btech-cse">B.Tech. - Computer Science & Engineering (Specialization in Industrial Internet of Things)</option>
+                                <option value="btech-ec">B.Tech. - Electronics & Communication Engineering</option>
+                                <option value="btech-ec">B.Tech. - Electronics & Communication Engineering with minor in Computer Science & Engineering</option>
+                                <option value="btech-ec">B.Tech. - Electronics & Communication Engineering (Specialization in VLSI)</option>
+                                <option value="btech-ece">B.Tech. - Electronics & Computer Engineering</option>
+                                <option value="btech-eee">B.Tech. - Electrical & Electronics Engineering</option>
+                                <option value="btech-ee">B.Tech. - Electrical Engineering</option>
+                                <option value="btech-ee">B.Tech. - Electrical Engineering with minor in Computer Science & Engineering</option>
+                                <option value="btech-ee">B.Tech. - Electrical Engineering (Specialization in Electric Vehicle Technology)</option>
+                                <option value="btech-me">B.Tech. - Mechanical Engineering</option>
+                                <option value="btech-me">B.Tech. - Mechanical Engineering (Specialization in Automobile)</option>
+                                <option value="btech-me">B.Tech. - Mechanical Engineering (Specialization in Mechatronics)</option>
+                                <option value="btech-me">B.Tech. - Mechanical Engineering with minor in Computer Science & Engineering</option>
+                                <option value="btech-me">B.Tech. - Mechanical Engineering (Specialization in Smart Manufacturing)</option>
+                                <option value="btech-hons">B.Tech. (Hons.) - Computer Science & Engineering</option>
+                                <option value="btech-hons">B.Tech. (Hons.) - Computer Science & Engineering (Specialization in AI and Analytics)</option>
+                                <option value="btech-eit">B.Tech. - Engineering in Information Technology</option>
+                                <option value="btech-bio">B.Tech. - Biotechnology</option>
+                                <option value="diploma-me">Diploma - Mechanical Engineering</option>
+                                <option value="diploma-cs">Diploma - Computer Science & Engineering</option>
+                                <option value="diploma-ec">Diploma - Electronics & Communication Engineering</option>
+                                <option value="diploma-ee">Diploma - Electrical & Electronics Engineering</option>
+                                <option value="diploma-it">Diploma - Information Technology</option>
+                                <option value="diploma-it">Diploma - Automobile Engineering</option>
+                                <option value="diploma-it">Diploma - Chemical Engineering</option>
+                                <option value="diploma-it">Diploma - Industrial Production</option>
+                                <option value="adv_diploma">Advance Diploma - CAD/CAM & CNC</option>
+                                <option value="adv_diploma">Advance - Tools & Die Making</option>
+                                <option value="diploma_ph">Diploma in Pharmacy</option>
+                                <option value="bba">Bachelor of Business Administration</option>
+                                <option value="bba">Bachelor of Business Administration. (Hons./Hons. with Research)</option>
+                                <option value="bba">Bachelor of Business Administration in Family Business</option>
+                                <option value="bba">Bachelor of Business Administration in Family Business (Hons./Hons. with Research)</option>
+                                <option value="bba">Bachelor of Business Administration (Hons.)</option>
+                                <option value="bba">Bachelor of Business Administration in Management Science</option>
+                                <option value="bba">Bachelor of Business Administration - Data Analytics And Business Intelligence</option>
+                                <option value="bba">Bachelor of Business Administration in Management Science (Hons./Hons. with Research)</option>
+                                <option value="bba">Bachelor of Business Administration - Data Analytics And Business Intelligence (Hons./Hons. with Research)</option>
+                                <option value="bca">Bachelor of Computer Applications</option>
+                                <option value="bca">Bachelor of Computer Applications (Specialization in Digital Marketing (AEDP))</option>
+                                <option value="bca">Bachelor of Computer Applications (Hons.)</option>
+                                <option value="bca">Bachelor of Computer Applications (Data Science)</option>
+                                <option value="bsc">B.Sc. - Biotechnology</option>
+                                <option value="bsc">B.Sc. - Bio-Tech</option>
+                                <option value="bsc">B.Sc. - Biotech (Hons./Hons. with Research)</option>
+                                <option value="bsc">B.Sc.(Hons.) - Chemistry</option>
+                                <option value="bsc">B.Sc.(Hons.) - Agriculture</option>
+                                <option value="bsc">B.Sc. - Chemistry</option>
+                                <option value="bsc">B.Sc. - Chemistry (Hons./Hons. with Research)</option>
+                                <option value="bsc">B.Sc.(Hons.) - Physics</option>
+                                <option value="bsc">B.Sc. - Physics</option>
+                                <option value="bsc">B.Sc. - Physics (Hons./Hons. with Research)</option>
+                                <option value="bsc">B.Sc. - Mathematics - Specialization in Data Science</option>
+                                <option value="bsc">B.Sc. - Mathematics (Hons./Hons. with Research) - Specialization</option>
+                                <option value="bPh">Bachelor of Pharmacy</option>
+                                <option value="bcom">B.Com. (Hons.)</option>
+                                <option value="bcom">B.Com. (Hons.) Global Accounting</option>
+                                <option value="bcom">B.Com.</option>
+                                <option value="bcom">B.Com. Global Accounting</option>
+                                <option value="bcom">B. Com. (Hons./Hons. with Research)</option>
+                                <option value="ba">Bachelor of Arts (Hons.) - Economics</option>
+                                <option value="ba">Bachelor of Arts - Economics</option>
+                                <option value="ba">Bachelor of Arts - Economics (Hons./Hons. with Research)</option>
+                                <option value="ba">Bachelor of Arts (Hons.) - English</option>
+                                <option value="ba">Bachelor of Arts - English</option>
+                                <option value="ba">Bachelor of Arts - English (Hons./Hons. with Research)</option>
+                                <option value="mca">MCA (Master of Computer Applications)</option>
+                                <option value="mba">MBA (Dual Specialization)</option>  
+                                <option value="bpharm">B.Pharm</option>
+                                <option value="bsc-biotech">B.Sc. Biotechnology</option>
+                                <option value="msc-chemistry">M.Sc. - Chemistry</option>
+                                <option value="msc-physics">M.Sc. - Physics</option>
+                                <option value="msc-mathematics">M.Sc. - Mathematics</option>
+                                <option value="msc-agriculture">M.Sc. - Agriculture</option>
+                                <option value="msc-agri-econ">M.Sc. - Agriculture (Specialization in Agricultural Economics)</option>
+                                <option value="msc-agri-ext">M.Sc. - Agriculture (Specialization in Agricultural Extension)</option>
+                                <option value="msc-agri-agro">M.Sc. - Agriculture (Specialization in Agronomy)</option>
+                                <option value="msc-agri-ento">M.Sc. - Agriculture (Specialization in Entomology)</option>
+                                <option value="msc-agri-gen">M.Sc. - Agriculture (Specialization in Genetics and Plant Breeding)</option>
+                                <option value="msc-agri-hort">M.Sc. - Agriculture (Specialization in Horticulture)</option>
+                                <option value="msc-agri-path">M.Sc. - Agriculture (Specialization in Plant Pathology)</option>
+                                <option value="msc-agri-seed">M.Sc. - Agriculture (Specialization in Seed Science and Technology)</option>
+                                <option value="msc-agri-soil">M.Sc. - Agriculture (Specialization in Soil Science)</option>
+                                <option value="msc-agri-hort-fruit">M.Sc. - Agriculture (Specialization in Horticulture - Fruit Science)</option>
+                                <option value="msc-agri-hort-veg">M.Sc. - Agriculture (Specialization in Horticulture - Vegetable Science)</option>
+                                <option value="msc-agri-flori">M.Sc. - Agriculture (Specialization in Floriculture and Landscaping)</option>
+                                <option value="msc-biotech">M.Sc. - Biotechnology</option>
+                                <option value="msc-bioinfo">M.Sc. - Bioinformatics</option>
+                                <option value="msc-microbio">M.Sc. - Microbiology</option>
+                                <option value="mtech-civil-struct">M.Tech. - Civil Engineering (Structural Engineering)</option>
+                                <option value="mtech-civil-geo">M.Tech. - Civil Engineering (Geotechnical Engineering)</option>
+                                <option value="mtech-civil-trans">M.Tech. - Civil Engineering (Transportation Engineering)</option>
+                                <option value="mtech-elec">M.Tech. - Electrical Engineering</option>
+                                <option value="mtech-mech-prod">M.Tech. - Mechanical Engineering (Production)</option>
+                                <option value="mtech-mech-design">M.Tech. - Mechanical Engineering (Design)</option>
+                                <option value="mtech-mech-thermal">M.Tech. - Mechanical Engineering (Thermal & Fluid Engineering)</option>
+                                <option value="mtech-ict">M.Tech. - Information & Communication Technology</option>
+                                <option value="mtech-ece">M.Tech. - Electronics & Communication Engineering</option>
+                                <option value="mtech-cse">M.Tech. - Computer Science & Engineering</option>
+                                <option value="mtech-energy">M.Tech. - Energy Systems</option>
+                                <option value="mba-gen">Master of Business Administration</option>
+                                <option value="mba-logistics">MBA - Logistics and Supply Chain Management</option>
+                                <option value="mba-family-biz">MBA - Family Business & Entrepreneurship</option>
+                                <option value="mba-finance">MBA - Financial Markets & Banking</option>
+                                <option value="mba-integrated">MBA Integrated</option>
+                                <option value="mba-construction">MBA - Construction Management</option>
+                                <option value="mba-hons">Master of Business Administration (Hons.)</option>
+                                <option value="mba-analytics">MBA - Business Analytics</option>
+                                <option value="llm-gen">LL.M. (No Branch)</option>
+                                <option value="llm-cyber">LL.M. - Cyber and Data Privacy Law</option>
+                                <option value="llm-banking">LL.M. - Banking, Finance and Insurance Law</option>
+                                <option value="bcom-llb">B.Com. LLB (Hons.)</option>
+                                <option value="ba-llb">Bachelor of Arts LLB (Hons.)</option>
+                                <option value="bba-llb">BBA LLB (Hons.)</option>
+                                <option value="ma-english">Master of Arts - English</option>
+                                <option value="adv-dip-tools">Advance Diploma - Tools & Die Making</option>
+                                <option value="adv-dip-cad">Advance Diploma - CAD/CAM & CNC</option>
+                                <option value="cert-exec-dev">Certificate Courses - Executive Development Programme</option>
+                                <option value="cert-hardware">Certificate Courses - Computer Hardware & Networking</option>
+                                <option value="cert-cad">Certificate Courses - CAD/CAM & CNC</option>
+                                <option value="dip-lib-sci">Diploma in Library and Information Science</option>
+                                <option value="blib-sci">Bachelor of Library and Information Science</option>
+                                <option value="mlib-sci">Master of Library and Information Science</option>
+                                <option value="ma-english">Master of Arts - English</option>
+                                <option value="adv-dip-tools">Advance Diploma - Tools & Die Making</option>
+                                <option value="adv-dip-cad">Advance Diploma - CAD/CAM & CNC</option>
+                                <option value="cert-exec">Certificate Courses - Executive Development Programme</option>
+                                <option value="cert-hw-net">Certificate Courses - Computer Hardware & Networking</option>
+                                <option value="cert-cad">Certificate Courses - CAD/CAM & CNC</option>
+                                <option value="dip-lib-sci">Diploma in Library and Information Science</option>
+                                <option value="blib-sci">Bachelor of Library and Information Science</option>
+                                <option value="mlib-sci">Master of Library and Information Science</option>
+                                <option value="mpharm-pharmacol">Master of Pharmacy - Pharmacology</option>
+                                <option value="mpharm-chem">Master of Pharmacy - Pharmaceutical Chemistry</option>
+                                <option value="mpharm-pharmaceut">Master of Pharmacy - Pharmaceutics</option>
+                                <option value="mpharm-reg">Master of Pharmacy - Regulatory Affairs</option>
+                                <option value="pharmd">Pharm D</option>
+                                <option value="pdf-english">Post Doctor Fellow - English</option>
+                                <option value="phd-all">Ph.D. - All Branch</option>
+                            </select>
+                        </div>
+                    </div>
+                
+                    <div class="row mb-3">
+                        <div class="col-md-4"><label>Level & Mode:</label></div>
+                        <div class="col-md-4">
+                            <select class="form-control" id="level">
+                                <option value="">-- Level --</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-control" id="mode">
+                                <option value="">-- Mode --</option>
+                            </select>
+                        </div>
+                    </div>
+                
+                    <div class="row mb-4">
+                        <div class="col-md-4">
+                            <label for="10th_per">10<sup>th</sup> Percentage:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <input type="number" id="10th_per" class="form-control" placeholder="Enter 10th Percentage">
+                        </div>
+                    </div>
+                
+                    <button class="btn btn-warning w-100">APPLY NOW</button>
+                
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock body %}

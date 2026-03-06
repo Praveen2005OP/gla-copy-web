@@ -1,0 +1,142 @@
+/* Top bar */
+.top-bar {
+    background: rgb(0, 164, 214);
+    color: white;
+    font-size: 14px;
+    padding: 4.5px 0;
+}
+
+.contact-info {
+    font-size: 12px;
+    padding-left: 55px;
+}
+
+.divider {
+    border-left: 1px solid white;
+    margin: 0 12px;
+    align-self: stretch;
+}
+
+/* right side icons */
+.top-right a {
+    color: white;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+/* login button */
+.login-btn {
+    background: #f26522;
+    font-size: 12px;
+    padding: 10px 12px;
+}
+
+/* navbar */
+.navbar {
+    padding: 10px 0;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+}
+
+/* Header Section */
+.container-fluid {
+    padding: 14px;
+}
+
+#navbarreferencedContent {
+    padding-right: 20px;
+}
+
+/* Side Social Panel */
+.social-sidebar {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 1000;
+    
+}
+
+.social-sidebar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 6px 13px;
+    font-size: 14px;
+    transition: 0.3s;
+    border-radius: 20%;
+}
+
+/* Colors */
+.facebook { background: #3b5998; }
+.youtube { background: #ff0000; }
+.twitter { background: #1da1f2; }
+.linkedin { background: #0077b5; }
+.whatsapp { background: #25d366; }
+.email { background: #333; }
+
+/* Hover effect */
+.social-sidebar a:hover {
+    padding-left: 20px;
+}
+
+/* Footer Main Section */
+.footer-section {
+    background-color: rgb(0, 195, 255);
+    color: white;
+    padding: 20px 0;
+}
+
+/* Footer Box */
+.footer-box {
+    padding: 20px;
+}
+
+/* Footer Titles */
+.footer-title {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Footer Details */
+#footer-details {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* App Store Buttons */
+.app-buttons img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Social Icons Container */
+.social-icons {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+}
+
+/* Social Icon Style */
+.social-icon {
+    width: 45px;
+    height:45px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.social-icon:hover {
+    background: white;
+    color: rgb(0, 195, 255);
+    transform: rotate(360deg);
+}

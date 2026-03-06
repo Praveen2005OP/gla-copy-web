@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLAMS - GLA University</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Admission/Registeration CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/registeration.css') }}">   
+    <!-- District loader -->
+    <script src="{{ url_for('static', filename='js/district.js') }}"></script>
+</head>
+<body>
+    <!-- Top Contact Bar -->
+    <div class="top-bar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="contact-info">
+                Contact: 17km Stone, NH-19 Mathura-Delhi Road Mathura-281406 (U.P.) INDIA
+                <span class="divider"></span>
+                Phone: +91-5662-250900
+                <span class="divider"></span>
+            </div>
+            <div class="top-right">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="login-btn">Log In</a>
+            </div>
+        </div>
+    </div>
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="">
+        </div>
+        <div class="container-fluid">
+            <div>
+                <a class="navbar-brand" href="/"><img src="https://imgs.search.brave.com/fxY_4Z8YGLvFkaubzx_SlCPxwtuOX_vv8km1LkmroDM/rs:fit:0:180:1:0/g:ce/aHR0cHM6Ly93d3cu/YWRtaXNzaW9uaW5k/aWEubmV0L3VwbG9h/ZHMvY29sbGVnZXMv/MTQ2L2dsYS11bml2/ZXJzaXR5LWxvZ28u/anBn" alt="GLA University Logo" class="img-fluid" width="75px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarreferencedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarreferencedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
+                    <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/admission">Admission</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Student Clubs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Side Social Panel -->
+    <div class="social-sidebar">
+        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="#" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
+        <a href="#" class="email"><i class="fa fa-envelope"></i></a>
+    </div>
+    {% block body %}
+
+    {% endblock %}
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row mt-2">
+                <div class="col-12 col-lg-4 footer-box">
+                    <p class="footer-title">Get In Touch</p>
+                    <p id="footer-details">Address: 17km Stone, NH-19, Mathura-Delhi Road, Mathura-281406 (U.P.) INDIA</p>
+                    <p id="footer-details">Phone: +91-5662-250900</p>
+                    <p id="footer-details">Email: glausoftwaresupport@gla.ac.in</p>
+                </div>
+                <div class="col-12 col-lg-4 footer-box">
+                    <p class="footer-title">DOWNLOAD OUR FREE MOBILE APPS</p>
+                    <div class="app-buttons">
+                        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"></a>
+                        <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"></a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 footer-box">
+                    <p class="footer-title">SOCIAL MEDIA</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fa fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fa fa-youtube"></i></a>
+                        <a href="#" class="social-icon"><i class="fa fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
